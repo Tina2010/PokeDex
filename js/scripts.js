@@ -1,7 +1,9 @@
-alert('Hello world');
+let pokemonList = [
+    { name: 'Butterfree', types: ['Bug','Flying'], height: 4 },
+    { name: 'Charizard', types: ['Fire', 'Fyling'], height: 18 },
+    { name: 'Nidoqueen', types: ['Poison', 'Ground'], height: 9 }
+];
 
-let favoriteFood = 'Chicken';
-document.write(favoriteFood);
 
 /*
 let simpleAddition = 4 + 5;
