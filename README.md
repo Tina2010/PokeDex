@@ -1,16 +1,16 @@
-##Project description##
+<h2>Project description</h2>
 
 The provided application is used for the overview of Pokémon and details about Pokémon.
 
-##How to get the project running##
+<h2>How to get the project running</h2>
 
 You can reach the application via the following link:
 
-##Project dependencies##
+<h2>Project dependencies</h2>
 
 The following languages were used for the project:
 HTML, CSS, JavaScript
 
-##Which API did I use##
+<h2>Which API did I use</h2>
 
 I used the following API for embedding the data:
