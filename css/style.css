@@ -1,3 +1,22 @@
-﻿body {
+﻿:root {
+    --color-main-color: #1A1A1D;
+    --color-secondary-color: #faedf2;
+    --color-default-text: #faedf2;
+    --color-table-bg: #6c6c6f;
+    --color-unused-links: #950740;
+    --color-hover-nav-links: #f30c29;
+    --color-hover-body-links: #f57989;
+    --color-active-linkes: white;
+    --color-button-bg: #950740;
+    --color-project-item: #2f2f35;
+    --headline-font-weights: 700px;
+    --box-shawdow: 1px 5px 5px #950740;
+    --index-article-max-width: 900px;
+    --index-article-margin-bottom: 100px;
+    --index-article-margin: 0 auto;
+    --opactiy-header-and-footer: 0.9;
+}
+
+body {
     font-family: 'Raleway', sans-serif;
 }
