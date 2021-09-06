@@ -1,9 +1,11 @@
+// List of pokémon examples + types + height for output in a loop in the next step
 let pokemonList = [
     { name: 'Butterfree', types: ['Bug','Flying'], height: 4 },
     { name: 'Charizard', types: ['Fire', 'Fyling'], height: 18 },
     { name: 'Nidoqueen', types: ['Poison', 'Ground'], height: 9 }
 ];
 
+// output of the given list above
 for (let i = 0; i < pokemonList.length; i++) {
     document.write(pokemonList[i].name + " is " + pokemonList[i].height + " meter tall." + '<br>');
 }
