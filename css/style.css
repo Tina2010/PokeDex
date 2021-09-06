@@ -24,5 +24,185 @@
 }
 
 body {
+    font-weight: 400;
+    font-size: 18px;
+    background-color: var(--color-main-color);
+    color: var(--color-default-text);
+    line-height: 1.7;
     font-family: 'Raleway', sans-serif;
+}
+
+.page-header {
+    display: flex;
+    box-shadow: var(--box-shawdow-header);
+    background-color: var(--color-secondary-color);
+    opacity: var(--opactiy-header-and-footer);
+    min-height: 78px;
+    padding-left: 3rem;
+    padding-right: 50px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    color: var(--color-main-color);
+}
+
+    .page-header section {
+        padding: 0;
+        margin: auto;
+    }
+
+    .page-header section p {
+        padding: 0;
+        font-family: 'Amatic SC', cursive;
+        font-size: 30px;
+        margin: 5px;
+        border-style: dotted;
+    }
+
+.page-header__item {
+    flex: 0 1 200px;
+}
+
+    .page-header__item:last-child {
+        flex-grow: 1;
+        text-align: right;
+    }
+
+.navigation-list {
+    list-style-type: none;
+}
+
+    .navigation-list li {
+        display: inline-block;
+        margin-left: 15px;
+    }
+
+.navigation-list__item {
+    font-weight: normal;
+    color: var(--color-unused-nav-bar-links);
+}
+
+.navigation-list__item--active {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navigation-list__item:hover {
+    text-shadow: 1px 3px 5px var(--color-hover-nav-links);
+}
+
+main {
+    padding: 5px 3rem;
+}
+
+aside {
+    padding: 5px 3rem;
+}
+
+section {
+    padding: 5px 3rem;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: var(--headline-font-weights);
+    color: var(--color-default-text);
+    animation: slidein 3s;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: var(--headline-font-weights);
+    color: var(--color-default-text);
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: var(--headline-font-weights);
+    color: var(--color-default-text);
+}
+
+a {
+    font-weight: bold;
+    color: var(--color-unused-links);
+    /* No underlining when hovering over a link */
+    text-decoration: none;
+}
+
+    a:visited {
+        /*change of colors for visited links not wanted*/
+    }
+
+    a:hover,
+    a:focus {
+        /* currently no customization in place */
+        text-shadow: 1px 1px 1px var(--color-hover-body-links);
+    }
+
+    a:active {
+        /* selected link */
+        color: var(--color-active-linkes);
+    }
+
+button,
+.button {
+    /* overwrites browser defaults and resets the border */
+    border: none;
+    /* styles the background color, font color, and text decoration of the button */
+    background-color: var(--color-button-bg);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    /*adds spacing to the button*/
+    padding: 10px;
+    border-radius: 3px;
+    /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    transition: 0.2s opacity;
+}
+
+    button:hover,
+    button:focus,
+    .button:focus,
+    .button:hover {
+        /* lets the mouse appear as a hand when hovering over the button*/
+        cursor: pointer;
+        /* reduces the opacity of the button to 80%*/
+        opacity: 0.8;
+    }
+
+.buttonwithlink {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 5px;
+    min-height: 5px;
+    grid-gap: 10px;
+    line-height: normal;
+}
+
+.page_footer {
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--color-secondary-color);
+    color: black;
+    opacity: var(--opactiy-header-and-footer);
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    box-shadow: var(--box-shawdow-footer);
+}
+
+@media screen and (max-width: 480px) {
+    #contact-email,
+    #contact-tel,
+    #contact-message {
+        width: 2500%;
+    }
 }
