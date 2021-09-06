@@ -7,8 +7,13 @@ let pokemonList = [
 
 // output of the given list above
 for (let i = 0; i < pokemonList.length; i++) {
-    document.write(pokemonList[i].name + " is " + pokemonList[i].height + " meter tall." + '<br>');
-}
+    if
+        (pokemonList[i].height >= 10)
+        {document.write(pokemonList[i].name + " is " + pokemonList[i].height + " meter tall." + " - Wow, that's big!" + '<br>')
+    } else
+
+    {document.write(pokemonList[i].name + " is " + pokemonList[i].height + " meter tall." + '<br>')};
+};
 
 
 /*
