@@ -1,5 +1,5 @@
 // List of pokémon examples + types + height for output in a loop in the next step
-let pokemonList = [
+const pokemonList = [
     { name: 'Butterfree', types: ['Bug','Flying'], height: 4 },
     { name: 'Charizard', types: ['Fire', 'Fyling'], height: 18 },
     { name: 'Nidoqueen', types: ['Poison', 'Ground'], height: 9 }
