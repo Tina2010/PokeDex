@@ -7,9 +7,11 @@ let pokemonList = [
 
 // output of the given list above
 for (let i = 0; i < pokemonList.length; i++) {
+    // if-statement to look for pokemon that are 10 meter tall or taller than that
     if
         (pokemonList[i].height >= 10)
         {document.write(pokemonList[i].name + " is " + pokemonList[i].height + " meter tall." + " - Wow, that's big!" + '<br>')
+    // else-statement to use different output for pokemon that are smaller than 10 meter
     } else
 
     {document.write(pokemonList[i].name + " is " + pokemonList[i].height + " meter tall." + '<br>')};
