@@ -4,6 +4,10 @@ let pokemonList = [
     { name: 'Nidoqueen', types: ['Poison', 'Ground'], height: 9 }
 ];
 
+for (let i = 0; i < pokemonList.length; i++) {
+    document.write(pokemonList[i].name + " is " + pokemonList[i].height + " meter tall." + '<br>');
+}
+
 
 /*
 let simpleAddition = 4 + 5;
