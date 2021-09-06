@@ -1,16 +1,18 @@
 ﻿:root {
-    --color-main-color: #1A1A1D;
-    --color-secondary-color: #faedf2;
+    --color-main-color: #3b573b;
+    --color-secondary-color: #edfaf5;
     --color-default-text: #faedf2;
     --color-table-bg: #6c6c6f;
-    --color-unused-links: #950740;
-    --color-hover-nav-links: #f30c29;
-    --color-hover-body-links: #f57989;
+    --color-unused-links: #faedf2;
+    --color-unused-nav-bar-links: #3b573b;
+    --color-hover-nav-links: #3b573b;
+    --color-hover-body-links: #7fa87f;
     --color-active-linkes: white;
-    --color-button-bg: #950740;
+    --color-button-bg: #7fa87f;
     --color-project-item: #2f2f35;
     --headline-font-weights: 700px;
-    --box-shawdow: 1px 5px 5px #950740;
+    --box-shawdow-header: 1px 5px 5px #2f2f35;
+    --box-shawdow-footer: 1px -5px 5px #2f2f35;
     --index-article-max-width: 900px;
     --index-article-margin-bottom: 100px;
     --index-article-margin: 0 auto;
