@@ -19,6 +19,10 @@
     --opactiy-header-and-footer: 0.9;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Raleway', sans-serif;
 }
