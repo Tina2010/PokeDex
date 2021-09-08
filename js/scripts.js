@@ -1,9 +1,25 @@
 // List of pokémon examples + types + height for output in a loop in the next step
-const pokemonList = [
-    { name: 'Butterfree', types: ['Bug','Flying'], height: 4 },
-    { name: 'Charizard', types: ['Fire', 'Fyling'], height: 18 },
-    { name: 'Nidoqueen', types: ['Poison', 'Ground'], height: 9 }
-];
+let pokemonRepository = (function () {
+    let pokemonList = [
+        { name: 'Butterfree', types: ['Bug', 'Flying'], height: 4 },
+        { name: 'Charizard', types: ['Fire', 'Fyling'], height: 18 },
+        { name: 'Nidoqueen', types: ['Poison', 'Ground'], height: 9 }
+    ];
+
+    function getAll() {
+        return pokemonList;
+    }
+
+    function add(pokemon) {
+        pokemonList.push(pokemon);
+    }
+
+    return {
+        add: add,
+        getAll: getAll
+    }
+}
+)();
 
 // output of the given list above
 pokemonList.forEach(function (pokemon) {
