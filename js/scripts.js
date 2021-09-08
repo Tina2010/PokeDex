@@ -22,7 +22,8 @@ let pokemonRepository = (function () {
 )();
 
 // output of the given list above
-pokemonList.forEach(function (pokemon) {
+pokemonRepository.getAll().forEach(function (pokemon) {
+
     // if-statement to look for pokemon that are 10 meter tall or taller than that
     if
         (pokemon.height >= 10) {
