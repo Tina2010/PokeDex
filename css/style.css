@@ -212,7 +212,6 @@ button,
     opacity: var(--opactiy-header-and-footer);
     width: 100%;
     bottom: 0;
-    position: fixed;
     box-shadow: var(--box-shawdow-footer);
 }
 
