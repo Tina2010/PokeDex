@@ -95,6 +95,10 @@ main {
     padding: 5px 3rem;
 }
 
+main ul {
+    list-style-type: none;
+}
+
 aside {
     padding: 5px 3rem;
 }
@@ -143,6 +147,19 @@ a {
         /* selected link */
         color: var(--color-active-linkes);
     }
+
+.button-class {
+    width: 200px;
+    padding: 16px 32px;
+    box-shadow: var(--box-shawdow-header);
+    text-align: center;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+ul.pokemon-list {
+    padding: 0;
+}
 
 button,
 .button {
@@ -204,5 +221,7 @@ button,
     #contact-tel,
     #contact-message {
         width: 2500%;
+    .button-class {
+        width: 100%;
     }
 }
