@@ -6,6 +6,27 @@ let pokemonRepository = (function () {
         { name: 'Nidoqueen', types: ['Poison', 'Ground'], height: 9 }
     ];
 
+    function addListItem(pokemon) {
+        let ul = document.querySelector('.pokemon-list');
+        let liItem = document.createElement('li');
+
+        let button = document.createElement('button');
+        button.innerText = pokemon.name;
+        button.classList.add('button-class');
+
+        liItem.appendChild(button);
+        ul.appendChild(liItem);
+
+        button.addEventListener('click', function () {
+            showDetails(pokemon)
+        })
+
+    }
+
+    function showDetails(pokemon) {
+        console.log(pokemon);
+    }
+
     function getAll() {
         return pokemonList;
     }
@@ -16,22 +37,15 @@ let pokemonRepository = (function () {
 
     return {
         add: add,
-        getAll: getAll
+        getAll: getAll,
+        addListItem: addListItem
     }
 }
 )();
 
 // output of the given list above
 pokemonRepository.getAll().forEach(function (pokemon) {
-
-    // if-statement to look for pokemon that are 10 meter tall or taller than that
-    if
-        (pokemon.height >= 10) {
-        document.write(pokemon.name + " is " + pokemon.height + " meter tall." + " - Wow, that's big!" + '<br>')
-        // else-statement to use different output for pokemon that are smaller than 10 meter
-    } else { document.write(pokemon.name + " is " + pokemon.height + " meter tall." + '<br>') };
-
-
+    pokemonRepository.addListItem(pokemon);
 });
 
 
