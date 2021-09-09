@@ -157,6 +157,10 @@ a {
     cursor: pointer;
 }
 
+.pokedex {
+    position:initial;
+}
+
 ul.pokemon-list {
     padding: 0;
 }
