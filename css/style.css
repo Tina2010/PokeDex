@@ -211,6 +211,20 @@ button,
     line-height: normal;
 }
 
+#index-footer {
+    display: flex;
+    box-shadow: var(--box-shawdow-footer);
+    background-color: var(--color-secondary-color);
+    opacity: var(--opactiy-header-and-footer);
+    min-height: 15%;
+    padding-left: 3rem;
+    padding-right: 50px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    color: var(--color-main-color);
+}
+
 .page_footer {
     clear: both;
     display: flex;
