@@ -1,10 +1,6 @@
-// List of pokémon examples + types + height for output in a loop in the next step
+// List of pokÃ©mon examples + types + height for output in a loop in the next step
 let pokemonRepository = (function () {
-    let pokemonList = [
-        { name: 'Butterfree', types: ['Bug', 'Flying'], height: 4 },
-        { name: 'Charizard', types: ['Fire', 'Fyling'], height: 18 },
-        { name: 'Nidoqueen', types: ['Poison', 'Ground'], height: 9 }
-    ];
+    let pokemonList = [];
 
     function addListItem(pokemon) {
         let ul = document.querySelector('.pokemon-list');
