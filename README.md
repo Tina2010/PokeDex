@@ -14,3 +14,4 @@ HTML, CSS, JavaScript
 <h2>Which API did I use</h2>
 
 I used the following API for embedding the data:
+https://pokeapi.co/api/v2/pokemon/?limit=150
