@@ -240,6 +240,41 @@ button,
     box-shadow: var(--box-shawdow-footer);
 }
 
+@media screen and (min-width: 0px) {
+    .pokemon-list {
+        display: grid;
+        grid-template-columns: 1fr; 
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .pokemon-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .pokemon-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .pokemon-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr; 
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .pokemon-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    }
+}
+
 @media screen and (max-width: 480px) {
     #contact-email,
     #contact-tel,
