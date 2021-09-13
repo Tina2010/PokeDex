@@ -166,6 +166,9 @@ a {
 ul.pokemon-list {
     padding: 0;
 }
+.hidden {
+    display:none;
+}
 
 button,
 .button {
