@@ -3,6 +3,18 @@ let pokemonRepository = (function () {
     let pokemonList = [];
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
+    //add one pokemon at the time
+    function add(pokemon) {
+        if (
+            typeof pokemon === "object" &&
+            "name" in pokemon
+        ) {
+            pokemonList.push(pokemon);
+        } else {
+            console.log("Fetched Pokemon is wrong.")
+        }
+    }
+
     //provides data for displaying the pokemon in my website, "name" for the button and "detailsUrl" for the return of the pokemon details in the log
  
     function loadList() {
@@ -71,10 +83,6 @@ let pokemonRepository = (function () {
 
     function getAll() {
         return pokemonList;
-    }
-
-    function add(pokemon) {
-        pokemonList.push(pokemon);
     }
 
     // "Loading..." appears when you click on a pokemon and hiddes, when the pokedetails are loaded
