@@ -158,6 +158,14 @@ let pokemonRepository = (function () {
         }
     });
 
+    //hide modal, when outside of modal is clicked
+    modalContainer.addEventListener('click', (e) => {
+        let target = e.target;
+        if (target === modalContainer) {
+            hideModal();
+        }
+    });
+
     // "Loading..." appears when you click on a pokemon and hiddes, when the pokedetails are loaded
 
     function showLoadingMessage() {
