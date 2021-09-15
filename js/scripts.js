@@ -15,6 +15,11 @@ let pokemonRepository = (function () {
         }
     }
 
+    // now GET ALL pokemon-objects from pokemonList
+    function getAll() {
+        return pokemonList;
+    }
+
     //provides data for displaying the pokemon in my website, "name" for the button and "detailsUrl" for the return of the pokemon details in the log
  
     function loadList() {
@@ -79,10 +84,6 @@ let pokemonRepository = (function () {
         loadDetails(pokemon).then(function () {
             console.log(pokemon);
         });
-    }
-
-    function getAll() {
-        return pokemonList;
     }
 
     // "Loading..." appears when you click on a pokemon and hiddes, when the pokedetails are loaded
