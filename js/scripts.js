@@ -88,6 +88,8 @@ let pokemonRepository = (function () {
         });
     }
 
+    let modalContainer = document.querySelector('#modal-container');
+
     // "Loading..." appears when you click on a pokemon and hiddes, when the pokedetails are loaded
 
     function showLoadingMessage() {
