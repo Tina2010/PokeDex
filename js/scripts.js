@@ -90,6 +90,62 @@ let pokemonRepository = (function () {
 
     let modalContainer = document.querySelector('#modal-container');
 
+    // preparing modal 
+
+    function showModal(pokemon) {
+        let modalContainer = document.querySelector('#modal-container');
+
+        //remove existing modal content
+        modalContainer.innerHTML = '';
+
+        //creating the modal
+        let modal = document.createElement('div');
+        modal.classList.add('modal');
+
+        // adding close button to modal window
+        let closeButton = document.createElement('button');
+        closeButton.classList.add('modal-close');
+        closeButton.innerText = 'Close';
+        // click on Close to close modal window
+        closeButton.addEventListener('click', hideModal);
+
+        //add pokemon name to modal
+        let pokemonName = document.createElement('h1');
+        pokemonName.innerText = pokemon.name;
+
+        //create variables for pokemon details
+        let pokemonDetails = document.createElement('p');
+        let pokemonHeight = "Height: " + pokemon.height + " meter.";
+        let pokemonWeight = "Weight: " + pokemon.weight + " kg.";
+        let pokemonTypes = [];
+        let pokemonID = "Number: " + pokemon.id;
+        var lineBreak = '<br/>';
+
+        Object.keys(pokemon.types).forEach(key => {
+            pokemonTypes.push(pokemon.types[key].type.name);
+        });
+
+        //add pokemon details to modal
+        pokemonDetails.innerHTML =
+            pokemonHeight + '<br>' + pokemonWeight + '<br>' + "Type(s): " + pokemonTypes + '<br>' + pokemonID;
+
+        //adding pokemon img
+        let pokeImg = document.createElement('img');
+        pokeImg.setAttribute('src', pokemon.imageUrl);
+        pokeImg.setAttribute('alt', pokemon.name);
+
+        //marry the modal with its content
+        modal.appendChild(closeButton);
+        modal.appendChild(pokeImg);
+        modal.appendChild(pokemonName);
+        modal.appendChild(pokemonDetails);
+        modalContainer.appendChild(modal);
+
+        //placing modal in front of pokemon-list
+        modalContainer.classList.add('is-visible');
+    }
+
+
     // "Loading..." appears when you click on a pokemon and hiddes, when the pokedetails are loaded
 
     function showLoadingMessage() {
