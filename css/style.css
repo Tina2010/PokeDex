@@ -159,6 +159,22 @@ a {
     text-transform: capitalize;
 }
 
+    .button-class:active {
+        background-color: darkolivegreen;
+        color: white;
+    }
+
+    .button-class:hover {
+        box-shadow: 1px 5px 5px black;
+        transition: none;
+        opacity: unset;
+    }
+
+    .button-class:focus {
+        transition: none;
+        opacity: unset;
+    }
+
 .pokedex {
     position:initial;
 }
