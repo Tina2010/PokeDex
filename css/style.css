@@ -172,7 +172,48 @@ a {
         display: grid;
     }
 
+/*styling for modal*/
+.modal {
+    margin: auto;
+    display: inline-block;
+    box-sizing: border-box;
+    box-shadow: 15px 15px 15px black;
+    border: 2px solid black;
+    background: var(--color-main-color);
+    padding: 15px;
+    width: 100%;
+    max-width: 700px;
+    text-align: left;
+}
 
+/*styling for the Close button*/
+.modal-close {
+    float: right;
+    -webkit-appearance: none;
+    border: 0;
+    background: none;
+    color: white;
+    text-decoration: underline;
+}
+
+/*styling for modal title*/
+.modal h1 {
+    margin-top: 0;
+    color: var(--color-default-text);
+    text-transform: capitalize;
+}
+
+.modal img {
+    float: left;
+    width: 200px;
+    margin-right: 40px;
+}
+
+/*styling for modal text*/
+.modal p {
+    margin-bottom: 0;
+    color: var(--color-default-text);
+}
 
 .button-class {
     width: 200px;
