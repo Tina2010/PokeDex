@@ -1,7 +1,7 @@
 // List of pokémon examples + types + height for output in a loop in the next step
-let pokemonRepository = (function () {
-    let pokemonList = [];
-    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+const pokemonRepository = (function () {
+    const pokemonList = [];
+    const apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
     //add one pokemon at the time
     function add(pokemon) {
@@ -63,7 +63,7 @@ let pokemonRepository = (function () {
     // providing details for the output on the console.log
 
     function loadDetails(item) {
-        let url = item.detailsUrl;
+        const url = item.detailsUrl;
         showLoadingMessage();
         return fetch(url).then(function (response) {
             return response.json();
@@ -119,7 +119,6 @@ let pokemonRepository = (function () {
         let pokemonWeight = "Weight: " + pokemon.weight + " kg.";
         let pokemonTypes = [];
         let pokemonID = "Number: " + pokemon.id;
-        var lineBreak = '<br/>';
 
         Object.keys(pokemon.types).forEach(key => {
             pokemonTypes.push(pokemon.types[key].type.name);
@@ -160,7 +159,7 @@ let pokemonRepository = (function () {
 
     //hide modal, when outside of modal is clicked
     modalContainer.addEventListener('click', (e) => {
-        let target = e.target;
+        const target = e.target;
         if (target === modalContainer) {
             hideModal();
         }
