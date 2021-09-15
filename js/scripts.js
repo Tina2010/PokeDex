@@ -20,6 +20,25 @@ let pokemonRepository = (function () {
         return pokemonList;
     }
 
+    // adds button for each pokemon from the API
+
+    function addListItem(pokemon) {
+        let ul = document.querySelector('.pokemon-list');
+        let liItem = document.createElement('li');
+
+        let button = document.createElement('button');
+        button.innerText = pokemon.name;
+        button.classList.add('button-class');
+
+        liItem.appendChild(button);
+        ul.appendChild(liItem);
+
+        //click on pokemon(-button) to log details in console
+        button.addEventListener('click', function (event) {
+            showDetails(pokemon)
+        })
+    }
+
     //provides data for displaying the pokemon in my website, "name" for the button and "detailsUrl" for the return of the pokemon details in the log
  
     function loadList() {
@@ -58,24 +77,6 @@ let pokemonRepository = (function () {
             hideLoadingMessage();
             console.error(e);
         });
-    }
-
-    // adds button for each pokemon from the API
-
-    function addListItem(pokemon) {
-        let ul = document.querySelector('.pokemon-list');
-        let liItem = document.createElement('li');
-
-        let button = document.createElement('button');
-        button.innerText = pokemon.name;
-        button.classList.add('button-class');
-
-        liItem.appendChild(button);
-        ul.appendChild(liItem);
-
-        button.addEventListener('click', function () {
-            showDetails(pokemon)
-        })
     }
 
     // log output for clicking on the button above
