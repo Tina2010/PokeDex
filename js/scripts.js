@@ -151,6 +151,13 @@ let pokemonRepository = (function () {
         modalContainer.classList.remove('is-visible');
     }
 
+    //hide modal with ESC
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
+            hideModal();
+        }
+    });
+
     // "Loading..." appears when you click on a pokemon and hiddes, when the pokedetails are loaded
 
     function showLoadingMessage() {
