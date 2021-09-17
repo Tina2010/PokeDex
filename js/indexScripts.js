@@ -171,7 +171,7 @@ const pokemonRepository = (function () {
     // "Loading..." appears when you click on a pokemon and hiddes, when the pokedetails are loaded
 
     function showLoadingMessage() {
-        document.querySelector('.loading-message').classList.add('visible');
+        document.querySelector('.loading-message').classList.remove('hidden');
     }
 
     function hideLoadingMessage() {
