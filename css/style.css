@@ -19,10 +19,6 @@
     --opactiy-header-and-footer: 0.9;
 }
 
-* {
-    box-sizing: border-box;
-}
-
 body {
     font-weight: 400;
     font-size: 18px;
@@ -42,7 +38,6 @@ body {
     padding-right: 50px;
     position: sticky;
     top: 0;
-    width: 100%;
     color: var(--color-main-color);
 }
 
@@ -70,6 +65,7 @@ body {
 
 .navigation-list {
     list-style-type: none;
+    float: right;
 }
 
     .navigation-list li {
@@ -182,8 +178,9 @@ a {
     border: 2px solid black;
     background: var(--color-main-color);
     padding: 15px;
-    width: 100%;
-    max-width: 700px;
+    position: initial;
+    width: auto;
+    height: auto;
     text-align: left;
 }
 
@@ -192,6 +189,7 @@ a {
     float: right;
     -webkit-appearance: none;
     border: 0;
+    padding-top: 0;
     background: none;
     color: white;
     text-decoration: underline;
@@ -339,7 +337,7 @@ button,
     }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 700px) {
     .pokemon-list {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr; 
@@ -370,19 +368,28 @@ button,
     .button-class {
         width: 100%;
     }
+}
+
+@media screen and (max-width: 450px) {
 
     /*styling for modal title*/
-    .modal h1 {
-        margin-left: 20%;
+    .modal {
+        flex-direction: column-reverse;
+        align-self: center;
+        padding-bottom: 0;
     }
 
-    .modal img {
-        margin-left: 20%;
-        margin-right: 20%;
-    }
+        .modal img {
+            margin: 10%;
+            margin-left: 0;
+            height: unset;
+        }
 
-    /*styling for modal text*/
-    .modal p {
-        margin-left: 20%;
+        .modal div {
+            margin: auto;
+        }
+
+    .modal-close {
+        align-self: flex-end;
     }
 }
