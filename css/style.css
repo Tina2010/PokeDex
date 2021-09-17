@@ -175,7 +175,8 @@ a {
 /*styling for modal*/
 .modal {
     margin: auto;
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
     box-sizing: border-box;
     box-shadow: 15px 15px 15px black;
     border: 2px solid black;
@@ -194,6 +195,7 @@ a {
     background: none;
     color: white;
     text-decoration: underline;
+    align-self: start;
 }
 
 /*styling for modal title*/
