@@ -133,11 +133,14 @@ const pokemonRepository = (function () {
         pokeImg.setAttribute('src', pokemon.imageUrl);
         pokeImg.setAttribute('alt', pokemon.name);
 
+        let h1P = document.createElement('div');
+        h1P.appendChild(pokemonName);
+        h1P.appendChild(pokemonDetails);
+
         //marry the modal with its content
-        modal.appendChild(closeButton);
         modal.appendChild(pokeImg);
-        modal.appendChild(pokemonName);
-        modal.appendChild(pokemonDetails);
+        modal.appendChild(h1P);
+        modal.appendChild(closeButton);
         modalContainer.appendChild(modal);
 
         //placing modal in front of pokemon-list
