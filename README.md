@@ -1,11 +1,11 @@
 <h2>Project description</h2>
 
-The provided application is used for the overview of Pokémon and details about Pokémon.
+The provided application is used for the overview of PokÃ©mon and details about PokÃ©mon.
 
 <h2>How to get the project running</h2>
 
 You can reach the application via the following link:
-*-hosting in progress-*
+https://tina2010.github.io/PokeDex/
 
 <h2>Project dependencies</h2>
 
