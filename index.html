@@ -9,27 +9,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Lato:wght@300&family=Raleway:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://kit.fontawesome.com/930d47601c.js" crossorigin="anonymous"></script>
     <title>Tinas PokéDex | Home</title>
 </head>
 
 <body>
-    <header class="page-header">
-        <section>
-            <p>Tina's PokéDex</p>
-        </section>
+    <header class="container-fluid page-header">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" target="_blank" href="https://github.com/Tina2010">TR</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <!--Work in progress-->
-        <nav class="page-header__item">
-            <ul role="menubar" class="navigation-list">
-                <li role="presentation">
-                    <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
-                </li>
-                <li role="presentation">
-                    <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
-                </li>
-            </ul>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact </a>
+                    </li>
+                </ul>
+                <form class="form-inline" id="searchbar">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0 " type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
         </nav>
     </header>
+
     <main class="pokedex">
         <h1>PokéDex</h1>
         <ul class="pokemon-list"></ul>
