@@ -12,7 +12,7 @@ You can reach the application via the following link:
 The following languages were used for the project:
 * HTML
 * CSS
-* JavaScript
+* JavaScript / jQuery(Bootstrap)
 
 <h2>Which API did I use</h2>
 
@@ -21,7 +21,7 @@ https://pokeapi.co/api/v2/pokemon/?limit=150
 
 <h2>About scripts</h2>
 
-I add a promise-polyfill and a fetch-polyfill.
+I added a promise-polyfill and a fetch-polyfill.
 
 <h3>More about me:</h3>
 
