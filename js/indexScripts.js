@@ -129,8 +129,18 @@ const pokemonRepository = (function () {
 
     };
 
+    $('body').append('<div style="" id="loadingDiv"><div class="loader">Loading...</div></div>');
+    $(window).on('load', function () {
+        $("#loadingDiv").show();
+        setTimeout(removeLoader); //wait for page load.
+    });
+    function removeLoader() {
+        $("#loadingDiv").fadeOut(500, function () {
+            // fadeOut complete. Remove the loading div
+            $("#loadingDiv").hide(); //makes page more lightweight 
         });
-    };
+    }
+
 
     return {
         add: add,
