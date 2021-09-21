@@ -2,7 +2,20 @@
 const pokemonRepository = (function () {
     const pokemonList = [];
     const apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
-    let searchInput = document.querySelector('#searchbar');
+    const searchBar = document.getElementById('searchbar');
+
+    searchBar.addEventListener('input', function () {
+        let listPokemon = document.querySelectorAll('button');
+        let value = searchBar.value.toUpperCase();
+
+        listPokemon.forEach(function (pokemon) {
+            if (pokemon.innerText.toUpperCase().indexOf(value) > -1) {
+                pokemon.style.display = '';
+            } else {
+                pokemon.style.display = 'none';
+            }
+        });
+    });
 
     //add one pokemon at the time
     function add(pokemon) {
@@ -114,17 +127,8 @@ const pokemonRepository = (function () {
         pokemonDetails.innerHTML =
             pokemonHeight + '<br>' + pokemonWeight + '<br>' + "Type(s): " + pokemonTypes + '<br>' + pokemonID;
 
-        searchInput.addEventListener('submit', function () {
-            let listPokemon = document.querySelectorAll('button');
-            let value = searchInput.value.toUpperCase();
+    };
 
-            listPokemon.forEach(function (pokemon) {
-                if (pokemon.innerText.toUpperCase().indexOf(value) > -1) {
-                    pokemon.style.display = '';
-                } else {
-                    pokemon.style.display = 'none';
-                }
-            });
         });
     };
 
