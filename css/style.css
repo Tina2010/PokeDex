@@ -1,29 +1,6 @@
-﻿:root {
-    --color-main-color: #3b573b;
-    --color-secondary-color: #edfaf5;
-    --color-default-text: #faedf2;
-    --color-table-bg: #6c6c6f;
-    --color-unused-links: #faedf2;
-    --color-unused-nav-bar-links: #3b573b;
-    --color-hover-nav-links: #3b573b;
-    --color-hover-body-links: #7fa87f;
-    --color-active-linkes: white;
-    --color-button-bg: #7fa87f;
-    --color-project-item: #2f2f35;
-    --headline-font-weights: 700px;
-    --box-shawdow-header: 1px 5px 5px #2f2f35;
-    --box-shawdow-footer: 1px -5px 5px #2f2f35;
-    --index-article-max-width: 900px;
-    --index-article-margin-bottom: 100px;
-    --index-article-margin: 0 auto;
-    --opactiy-header-and-footer: 0.9;
-}
-
-body {
+﻿body {
     font-weight: 400;
     font-size: 18px;
-    background-color: var(--color-main-color);
-    color: var(--color-default-text);
     line-height: 1.7;
     font-family: 'Raleway', sans-serif;
 }
@@ -32,62 +9,14 @@ body {
     margin-top: 80px;
 }
 
-main {
-    padding: 5px 3rem;
-    top: 100px;
-    bottom: 15%;
-    position:absolute;
-    overflow: auto;
+.icon {
+    height: auto;
+    max-width: 50px;
 }
 
-main ul {
-    list-style-type: none;
+p {
+    margin: unset;
 }
-
-section {
-    padding: 5px 3rem;
-}
-
-h1 {
-    font-size: 30px;
-    font-weight: var(--headline-font-weights);
-    color: var(--color-default-text);
-    animation: slidein 3s;
-}
-
-h2 {
-    font-size: 24px;
-    font-weight: var(--headline-font-weights);
-    color: var(--color-default-text);
-}
-
-h3 {
-    font-size: 20px;
-    font-weight: var(--headline-font-weights);
-    color: var(--color-default-text);
-}
-
-a {
-    font-weight: bold;
-    color: var(--color-unused-links);
-    /* No underlining when hovering over a link */
-    text-decoration: none;
-}
-
-    a:visited {
-        /*change of colors for visited links not wanted*/
-    }
-
-    a:hover,
-    a:focus {
-        /* currently no customization in place */
-        text-shadow: 1px 1px 1px var(--color-hover-body-links);
-    }
-
-    a:active {
-        /* selected link */
-        color: var(--color-active-linkes);
-    }
 
 /*styling for modal title*/
 .modal-title {
@@ -100,15 +29,7 @@ a {
     margin-right: 40px;
 }
 
-/*styling for modal text*/
-.modal p {
-    margin-bottom: 0;
-    color: var(--color-default-text);
-}
-
 .list-group-item {
-    background-color: var(--color-button-bg);
-    color: var(--color-default-text);
     text-transform: capitalize;
     margin: 10px 10px 10px 0px;
 }
@@ -118,8 +39,9 @@ a {
     }
 
 
-.pokedex {
-    position:initial;
+.websiteMain {
+    position: initial;
+    padding: 5px 3rem;
 }
 
 ul.pokemon-list {
@@ -130,36 +52,16 @@ ul.pokemon-list {
     width: auto;
 }
 
-button,
-.button {
-    /* overwrites browser defaults and resets the border */
-    border: none;
-    /* styles the background color, font color, and text decoration of the button */
-    background-color: var(--color-button-bg);
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    /*adds spacing to the button*/
-    padding: 10px;
-    border-radius: 3px;
-    /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
-    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-    transition: 0.2s opacity;
+.contactDetails {
+    max-width: 200px;
 }
 
-    button:hover,
-    button:focus,
-    .button:focus,
-    .button:hover {
-        /* lets the mouse appear as a hand when hovering over the button*/
-        cursor: pointer;
-        /* reduces the opacity of the button to 80%*/
-        opacity: 0.8;
-    }
+.contactText {
+    max-width: 350px;
+}
 
-.buttonwithlink {
-    text-decoration: none;
-    color: #ffffff;
+.iconNote {
+    font-size: 10px;
 }
 
 #contact-form {
@@ -232,41 +134,5 @@ button,
     .pokemon-list {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
-    }
-}
-
-@media screen and (max-width: 480px) {
-    #contact-email,
-    #contact-tel,
-    #contact-message {
-        width: 2000%;
-    }
-
-    .button-class {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 450px) {
-
-    /*styling for modal title*/
-    .modal {
-        flex-direction: column-reverse;
-        align-self: center;
-        padding-bottom: 0;
-    }
-
-        .modal img {
-            margin: 10%;
-            margin-left: 0;
-            height: unset;
-        }
-
-        .modal div {
-            margin: auto;
-        }
-
-    .modal-close {
-        align-self: flex-end;
     }
 }
