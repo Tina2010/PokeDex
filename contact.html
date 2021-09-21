@@ -34,52 +34,60 @@
         </nav>
     </header>
 
-    <main>
-        <h1>Contact</h1>
+    <main class="websiteMain">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <h1 style="color:red;">Contact</h1>
 
-        <p>Please feel free to contact me through the form down below. I will provide an answer as soon as possible.</p>
-
-        <form action="/send-mail-action" method="post" id="contact-form">
-            <label class="standard-label" for="contact-email">E-mail: </label>
-            <input type="email" id="contact-email" required>
-            <br>
-            <br>
-            <!--No validation for telephone numbers, since I assume to be contacted from different countries.-->
-            <label class="standard-label" for="contact-tel">Telephone: </label>
-            <input type="tel" id="contact-tel">
-            <br>
-            <br>
-            <label class="standard-label" for="contact-message">Message: </label>
-            <textarea maxlength="240" id="contact-message" required></textarea>
-            <br>
-            <br>
-            <input class="button" type="submit" value="Send message">
-        </form>
-
-        <aside>
-            <h2>Contact Details</h2>
-            <!-- All contact details have to be adjusted, before this page goes live. -->
-            Skype: <a href="skype:rosenbluette@hotmail.de">rosenbluette (at) hotmail.de</a><br>
-            E-Mail: <a href="mailto:t.rittmueller@gmx.de?subject=Testsubject&body=Hi!%20This%20is%20a%20test.%0D%0AHow%20are%20you%3F">t.rittmueller (at) gmx.de</a><br>
-
-        </aside>
+                    <p>Please feel free to contact me through the form down below. I will provide an answer as soon as possible.</p>
+                    <form>
+                        <div class="form-group">
+                            <label for="contact-email">E-mail:</label>
+                            <input type="email" class="form-control contactDetails" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@pattern.com">
+                            <small id="emailHelp" class="form-text text-muted">I'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-tel">Telephone:</label>
+                            <input type="tel" class="form-control contactDetails" id="exampleInputEmail2" aria-describedby="telHelp" placeholder="Example: +(49) 0 12345678 ">
+                            <small id="emailHelp" class="form-text text-muted">I'll never share your telephone-number with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Message:</label>
+                            <textarea type="text" class="form-control contactText" id="exampleInputEmail3" aria-describedby="textHelp" placeholder="..."></textarea>
+                            <small id="textHelp" class="form-text text-muted">Let know, what you want to talk about.</small>
+                        </div>
+                        <button type="submit" class="btn btn-outline-danger">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col">
+                    <h2>Contact Details</h2>
+                    <!-- All contact details have to be adjusted, before this page goes live. -->
+                    Skype: <a href="skype:rosenbluette@hotmail.de">rosenbluette (at) hotmail.de</a><br>
+                    E-Mail: <a href="mailto:t.rittmueller@gmx.de?subject=Testsubject&body=Hi!%20This%20is%20a%20test.%0D%0AHow%20are%20you%3F">t.rittmueller (at) gmx.de</a><br>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col">
+                    <p class="text-dark">Find me on</p>
+                    <!--Github Logo-->
+                    <a href="https://github.com/Tina2010" target="_blank"><img src="img/github-logo.svg" alt="Small Github Logo" /></a>
+                    <!--Twitter Logo-->
+                    <a href="https://twitter.com/TRittmuller" target="_blank"><img src="img/twitter-logo.svg" alt="Small Twitter Logo" /></a>
+                    <!--LinkedIn Logo-->
+                    <a href="https://www.linkedin.com/in/tina-rittmueller/" target="_blank"><img src="img/linkedin-logo.svg" alt="Small LinkedIn Logo" /></a>
+                </div>
+                <div class="col">
                     <div class="iconNote text-right">Pokemon-Trainer-Icon erstellt von <a href="https://www.flaticon.com/de/autoren/nikita-golubev" title="Nikita Golubev">Nikita Golubev</a> from <a href="https://www.flaticon.com/de/" title="Flaticon">www.flaticon.com</a></div>
+                </div>
+            </div>
+        </div>
     </main>
 
-
-
-    <Footer class="page_footer">
-        <p>Find me on</p>
-        <div class="social-media">
-            <!--Github Logo-->
-            <a href="https://github.com/Tina2010" target="_blank"><img src="img/github-logo.svg" alt="Small Github Logo" /></a>
-            <!--Twitter Logo-->
-            <a href="https://twitter.com/TRittmuller" target="_blank"><img src="img/twitter-logo.svg" alt="Small Twitter Logo" /></a>
-            <!--LinkedIn Logo-->
-            <a href="https://www.linkedin.com/in/tina-rittmueller/" target="_blank"><img src="img/linkedin-logo.svg" alt="Small LinkedIn Logo" /></a>
-        </div>
-    </Footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js"
             integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
             crossorigin="anonymous"></script>
