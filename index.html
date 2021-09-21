@@ -37,8 +37,8 @@
         </nav>
     </header>
 
-    <main class="pokedex">
-        <h1>PokéDex</h1>
+    <main class="websiteMain">
+        <h1 style="color:red;">PokéDex</h1>
         <ul class="pokemon-list"></ul>
         <div class="loading-message text-center">
             <span class="sr-only">Loading...</span>
@@ -49,17 +49,17 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content bg-dark">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel"></h5>
+                        <h5 class="modal-title text-light" id="exampleModalLabel"></h5>
                         <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body" id="modalBody">
-                        <img class="pokemonImg">
-                        <p class="text-left"></p>
+                    <div class="modal-body d-flex" id="modalBody">
+                        <img class="pokemonImg p-2 flex-fill">
+                        <p class="pokemon-details text-light p-2 flex-fill align-self-center"></p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
