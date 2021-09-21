@@ -109,8 +109,8 @@ const pokemonRepository = (function () {
         pokemonName.innerText = pokemon.name;
 
         //create variables for pokemon details
-        let pokemonDetails = document.querySelector('p');
-        let pokeImg = document.querySelector('img');
+        let pokemonDetails = document.querySelector('.pokemon-details');
+        let pokeImg = document.querySelector('.pokemonImg');
         pokeImg.setAttribute('src', pokemon.imageUrl);
         pokeImg.setAttribute('alt', pokemon.name);
 
