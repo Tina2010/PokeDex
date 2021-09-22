@@ -1,3 +1,7 @@
+$(window).on('load', function () {
+    $(".loader-wrapper").fadeOut('slow');
+});
+
 // List of pokémon examples + types + height for output in a loop in the next step
 const pokemonRepository = (function () {
     const pokemonList = [];
@@ -38,13 +42,11 @@ const pokemonRepository = (function () {
 
     function addListItem(pokemon) {
         let ul = document.querySelector('.pokemon-list');
-        ul.classList.add('list-group');
+        ul.classList.add('list-group','d-flex','flex-wrap');
 
         let button = document.createElement('button');
         button.innerText = pokemon.name;
-        button.classList.add('list-group-item-action');
-        button.classList.add('list-group-item');
-        button.classList.add('text-center');
+        button.classList.add('list-group-item-action', 'list-group-item', 'text-center', 'p-3', 'flex-fill');
 
         ul.appendChild(button);
 
@@ -128,19 +130,6 @@ const pokemonRepository = (function () {
             pokemonHeight + '<br>' + pokemonWeight + '<br>' + "Type(s): " + pokemonTypes + '<br>' + pokemonID;
 
     };
-
-    $('body').append('<div style="" id="loadingDiv"><div class="loader">Loading...</div></div>');
-    $(window).on('load', function () {
-        $("#loadingDiv").show();
-        setTimeout(removeLoader); //wait for page load.
-    });
-    function removeLoader() {
-        $("#loadingDiv").fadeOut(500, function () {
-            // fadeOut complete. Remove the loading div
-            $("#loadingDiv").hide(); //makes page more lightweight 
-        });
-    }
-
 
     return {
         add: add,

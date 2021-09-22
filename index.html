@@ -39,7 +39,12 @@
 
     <main class="websiteMain">
         <h1 style="color:red;">PokéDex</h1>
-        <ul class="pokemon-list"></ul>
+        <div class="pokemon-list">
+            <!--loading symbol-->
+            <div class="loader-wrapper">
+                <span class="spinner-border spinner-border-sm text-warning"></span>
+            </div>
+        </div>
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -52,7 +57,11 @@
                         </button>
                     </div>
                     <div class="modal-body d-flex" id="modalBody">
-                        <img class="pokemonImg p-2 flex-fill">
+                        <!--loading symbol-->
+                        <div class="loader-wrapper">
+                            <span class="spinner-border spinner-border-sm text-warning"></span>
+                        </div>
+                        <img class="pokemonImg p-2" style="max-width:50%; align-self:center;">
                         <p class="pokemon-details text-light p-2 flex-fill align-self-center"></p>
                     </div>
                     <div class="modal-footer">
