@@ -21,13 +21,6 @@ const pokemonRepository = (function () {
             }
         });
 
-        // reloading page after value was removed to toggle removing the loader-wrapper
-        value.addEventListener('remove', function (pokemon) {
-            if (value === " ") {
-                location.reload();
-            }
-        })
-
     });
 
     //add one pokemon at the time
