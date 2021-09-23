@@ -5,43 +5,16 @@
     font-family: 'Raleway', sans-serif;
 }
 
-/*start of page should not disappear behind header*/
-.page-header {
-    margin-top: 80px;
-}
-
 /*pokemon-trainer next to Home*/
 .icon {
     height: auto;
     max-width: 50px;
 }
 
-/*pokemon name should be written capitalized*/
-.modal-title {
-    text-transform: capitalize;
+h1 {
+    position: relative;
+    animation: mymove 5s normal;
 }
-
-/*pokemon-buttons*/
-.list-group-item {
-    text-transform: capitalize;
-    margin: 10px 10px 10px 0px;
-    width: auto;
-}
-
-    .list-group-item:last-child {
-        margin: 10px 10px 10px 0px;
-    }
-
-
-.websiteMain {
-    position: initial;
-    padding: 5px 3rem;
-}
-
-    .websiteMain h1 {
-        position: relative;
-        animation: mymove 5s normal;
-    }
 
 /*titles of each page slide in*/
 @keyframes mymove {
@@ -67,9 +40,4 @@
 /*note on footer should appear small*/
 .iconNote {
     font-size: 10px;
-}
-
-. /*try to make loader-symbol appear in front of modal*/
-.loader-wrapper {
-    z-index: 9999;
 }
