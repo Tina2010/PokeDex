@@ -1,3 +1,4 @@
+//loading page
 $(window).on('load', function () {
     $(".loader-wrapper").fadeOut('slow');
 });
@@ -19,6 +20,14 @@ const pokemonRepository = (function () {
                 pokemon.style.display = 'none';
             }
         });
+
+        // reloading page after value was removed to toggle removing the loader-wrapper
+        value.addEventListener('remove', function (pokemon) {
+            if (value === " ") {
+                location.reload();
+            }
+        })
+
     });
 
     //add one pokemon at the time
@@ -41,18 +50,24 @@ const pokemonRepository = (function () {
     // adds button for each pokemon from the API
 
     function addListItem(pokemon) {
-        let ul = document.querySelector('.pokemon-list');
-        ul.classList.add('list-group','d-flex','flex-wrap');
+        let li = document.querySelector('.pokemon-list');
+        li.classList.add('text-center');
 
         let button = document.createElement('button');
         button.innerText = pokemon.name;
-        button.classList.add('list-group-item-action', 'list-group-item', 'text-center', 'p-3', 'flex-fill');
+        button.classList.add('btn', 'btn-outline-dark', 'm-2', 'col-xl-2', 'col-lg-3', 'col-sm-4', 'col-7', 'text-capitalize', 'pokemonButton');
 
-        ul.appendChild(button);
+        li.appendChild(button);
 
         //click on pokemon(-button) to log details in console
         button.addEventListener('click', function (event) {
-            showDetails(pokemon)
+            showDetails(pokemon);
+
+            //loading img
+            $('.pokemonImg').on('load', function () {
+                $(".loader-wrapper1").fadeOut('slow');
+            });
+
         })
     }
 
@@ -128,8 +143,7 @@ const pokemonRepository = (function () {
         //add pokemon details to modal
         pokemonDetails.innerHTML =
             pokemonHeight + '<br>' + pokemonWeight + '<br>' + "Type(s): " + pokemonTypes + '<br>' + pokemonID;
-
-    };
+    }
 
     return {
         add: add,
@@ -140,8 +154,8 @@ const pokemonRepository = (function () {
         showDetails: showDetails,
         showModal: showModal
     }
-}
-)();
+
+})();
 
 // output of the given list above
 pokemonRepository.loadList().then(function () {
@@ -149,5 +163,3 @@ pokemonRepository.loadList().then(function () {
         pokemonRepository.addListItem(pokemon);
     });
 });
-
-
