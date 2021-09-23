@@ -16,7 +16,7 @@
 <body>
     <header class="container-fluid page-header">
         <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
-            <img class="icon img-fluid w-5" src="img/pokemon-trainer.png" alt="website-icon" style="filter: drop-shadow(1px 1px 5px white); filter: drop-shadow(1px 1px 5px white);" "     />
+            <img class="icon img-fluid w-5" src="img/pokemon-trainer.png" alt="website-icon" style="filter: drop-shadow(1px 1px 5px white); filter: drop-shadow(1px 1px 5px white);" />
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -34,17 +34,16 @@
         </nav>
     </header>
 
-    <main class="websiteMain">
+    <main class="mt-5 pt-5">
+        <div class="loader-wrapper text-center">
+            <span class="spinner-border spinner-border-sm"></span>
+        </div>
         <div class="container-fluid">
             <div class="row">
                 <div class="col">
                     <h1 style="color:red;">Contact</h1>
 
                     <p>Please feel free to contact me through the form down below. I will provide an answer as soon as possible.</p>
-
-                    <div class="loader-wrapper">
-                        <span class="spinner-border spinner-border-sm"></span>
-                    </div>
 
                     <form>
                         <div class="form-group">
@@ -63,6 +62,7 @@
                             <small id="textHelp" class="form-text text-muted">Let know, what you want to talk about.</small>
                         </div>
                         <button type="submit" class="btn btn-outline-danger">Submit</button>
+                        <p style="color:red;">(Currently not in use)</p>
                     </form>
                 </div>
             </div>
@@ -87,12 +87,12 @@
                     <a href="https://www.linkedin.com/in/tina-rittmueller/" target="_blank"><img src="img/linkedin-logo.svg" alt="Small LinkedIn Logo" /></a>
                 </div>
                 <div class="col">
-                    <div class="iconNote text-right">Pokemon-Trainer-Icon erstellt von <a href="https://www.flaticon.com/de/autoren/nikita-golubev" title="Nikita Golubev">Nikita Golubev</a> from <a href="https://www.flaticon.com/de/" title="Flaticon">www.flaticon.com</a></div>
+                    <div class="iconNote text-right">Pokemon-Trainer-Icon created by <a href="https://www.flaticon.com/de/autoren/nikita-golubev" title="Nikita Golubev">Nikita Golubev</a> from <a href="https://www.flaticon.com/de/" title="Flaticon">www.flaticon.com</a></div>
                 </div>
             </div>
         </div>
     </main>
-
+    <footer class="mt-2 pt-2"></footer>
     <script src="https://code.jquery.com/jquery-3.3.1.js"
             integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
             crossorigin="anonymous"></script>
