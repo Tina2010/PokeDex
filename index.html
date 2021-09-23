@@ -16,7 +16,7 @@
 <body>
     <header class="container-fluid page-header">
         <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
-            <img class="icon img-fluid w-5" src="img/pokemon-trainer.png" alt="website-icon" style="filter: drop-shadow(1px 1px 5px white); filter: drop-shadow(1px 1px 5px white);" "  />
+            <img class="icon img-fluid w-5" src="img/pokemon-trainer.png" alt="website-icon" style="filter: drop-shadow(1px 1px 5px white); filter: drop-shadow(1px 1px 5px white);"/>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -37,32 +37,35 @@
         </nav>
     </header>
 
-    <main class="websiteMain">
-        <h1 style="color:red;">PokéDex</h1>
-        <div class="pokemon-list">
-            <!--loading symbol-->
-            <div class="loader-wrapper">
-                <span class="spinner-border spinner-border-sm text-warning"></span>
+    <main class="container-fluid">
+        <div id="anchor" class="mt-5 pt-5">
+            <h1 class="text-center" style="color:red;">PokéDex</h1>
+            <div class="pokemon-list">
+                <!--loading symbol-->
+                <div class="loader-wrapper">
+                    <span class="spinner-border spinner-border-sm text-warning"></span>
+                </div>
             </div>
         </div>
 
         <!-- Modal -->
+
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content bg-dark">
                     <div class="modal-header">
-                        <h5 class="modal-title text-light" id="exampleModalLabel"></h5>
+                        <h5 class="modal-title text-light text-capitalize" id="exampleModalLabel"></h5>
                         <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body d-flex" id="modalBody">
+                        <img class="pokemonImg p-2" style="max-width:50%; align-self:center;">
                         <!--loading symbol-->
                         <div class="loader-wrapper">
                             <span class="spinner-border spinner-border-sm text-warning"></span>
                         </div>
-                        <img class="pokemonImg p-2" style="max-width:50%; align-self:center;">
-                        <p class="pokemon-details text-light p-2 flex-fill align-self-center"></p>
+                        <p class="pokemon-details text-light p-2"></p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
@@ -70,10 +73,15 @@
                 </div>
             </div>
         </div>
+
+        <hr class="my-4">
+        <div class="d-flex justify-content-center">
+            <a class="btn btn-sm btn-danger" href="#anchor">Move back to Top</a>
+        </div>
     </main>
 
     <footer>
-        <div class="iconNote">Pokemon-Trainer-Icon erstellt von <a href="https://www.flaticon.com/de/autoren/nikita-golubev" title="Nikita Golubev">Nikita Golubev</a> from <a href="https://www.flaticon.com/de/" title="Flaticon">www.flaticon.com</a></div>
+        <div class="iconNote">Pokemon-Trainer-Icon created by <a href="https://www.flaticon.com/de/autoren/nikita-golubev" title="Nikita Golubev">Nikita Golubev</a> from <a href="https://www.flaticon.com/de/" title="Flaticon">www.flaticon.com</a></div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.js"
