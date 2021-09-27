@@ -56,11 +56,6 @@ const pokemonRepository = (function () {
         button.addEventListener('click', function (event) {
             showDetails(pokemon);
 
-            //loading img
-            $('.pokemonImg').on('load', function () {
-                $(".loader-wrapper1").fadeOut('slow');
-            });
-
         })
     }
 
@@ -123,6 +118,16 @@ const pokemonRepository = (function () {
         let pokeImg = document.querySelector('.pokemonImg');
         pokeImg.setAttribute('src', pokemon.imageUrl);
         pokeImg.setAttribute('alt', pokemon.name);
+
+        //show loading symbol in front of img
+        $('.pokemonImg').each(function () {
+            $(".loader-wrapper1").fadeIn('fast');
+            pokeImg.onload = function () {
+                console.log('done!');
+                $(".loader-wrapper1").fadeOut('slow');
+            }
+            console.log('not done!');
+        });
 
         let pokemonHeight = "Height: " + pokemon.height + " meter.";
         let pokemonWeight = "Weight: " + pokemon.weight + " kg.";
