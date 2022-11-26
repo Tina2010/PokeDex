@@ -1,3 +1,5 @@
+Project archived: This project will not be maintained anymore.
+
 <h2>Project description</h2>
 
 The provided application is used for the overview of Pokémon and details about Pokémon.
